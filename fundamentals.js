@@ -130,6 +130,8 @@ const CourseInfo = {
 
   for (const learner of LearnerData) {
     learner.avg /= AssignmentGroup.group_weight;
+    //to format average to two decimal places, so my array below won't be so long
+    learner.avg = learner.avg.toFixed(2);
   }
    console.log(LearnerData);
 } catch (error) {
