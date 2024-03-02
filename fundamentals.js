@@ -101,6 +101,7 @@ const CourseInfo = {
   console.log(result);
   console.log('--------------------')
 
+//I began here
   const LearnerData = [];
 
   try {
@@ -124,7 +125,8 @@ const CourseInfo = {
     }
 
     learner.avg += percentage * AssignmentGroup.group_weight;
-    learner[submission.assignment_id] = percentage;
+    //added .toFixed(2) here becasue my output was showing 0.93333333333333333333333333
+    learner[submission.assignment_id] = percentage.toFixed(2);
 
   }
 
